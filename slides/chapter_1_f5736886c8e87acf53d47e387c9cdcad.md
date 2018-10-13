@@ -185,6 +185,46 @@ Another way to alter strings is through parsing functions.  The LEFT, RIGHT, and
 
 
 ---
+## Trimming Spaces
+
+```yaml
+type: "TwoRows"
+key: "f42bb6c144"
+```
+
+`@part1`
+
+
+
+`@part2`
+
+
+
+`@script`
+Sometimes, the data is entered with extra spaces at the start or the end.  This causes two values that should be identical to be separated out.  In this example, although both values clearly show UK....
+
+
+---
+## Trimming Spaces
+
+```yaml
+type: "TwoRows"
+key: "664d8efb5a"
+```
+
+`@part1`
+
+
+
+`@part2`
+
+
+
+`@script`
+...The second row has a leading space, causing the report to output two separate values.  To fix this, we can use the TRIM() function, which removes all leading and trailing spaces.
+
+
+---
 ## Final Slide
 
 ```yaml
