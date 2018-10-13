@@ -144,13 +144,15 @@ To:
 
 
 `@part2`
-Use ```REPLACE()``` function to either replace or remove portions of the string.{{1}}
+Must remove all periods from the strings.{{1}}
+
+Use the ```REPLACE()``` function to remove or replace characters.{{2}}
 
 ```sql
 SELECT REPLACE(country,".","")
 FROM country_orders
 GROUP BY 1
-```{{2}}
+```{{3}}
 
 
 `@script`
@@ -181,6 +183,30 @@ SELECT LEFT(country,2)
 FROM country_orders
 GROUP BY 1
 ```{{2}}
+
+
+`@script`
+
+
+
+---
+## Changing CASE
+
+```yaml
+type: "TwoColumns"
+key: "3fd76c0e8b"
+```
+
+`@part1`
+From:
+![](https://assets.datacamp.com/production/repositories/3775/datasets/0aa354a7ab9aef85ae3c31fe3f5d39a3e20f8d64/upper_table.PNG)
+
+To:
+![](https://assets.datacamp.com/production/repositories/3775/datasets/6c5fddf16b295446f1f484fbb07b9947b223cd1b/upper_output.PNG)
+
+
+`@part2`
+
 
 
 `@script`
