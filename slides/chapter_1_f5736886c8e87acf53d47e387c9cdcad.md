@@ -43,6 +43,88 @@ Here's it the current state of our report.  Several of the values include extra 
 
 
 ---
+## String Functions
+
+```yaml
+type: "TwoRows"
+key: "84fe86d634"
+```
+
+`@part1`
+![](https://assets.datacamp.com/production/repositories/3775/datasets/58b76f5155d5f39f9a75e21082f46effa7093da0/str_parsing_ex_1.png)
+
+
+`@part2`
+
+
+
+`@script`
+A string function must take a string field as the input...
+
+
+---
+## String Functions
+
+```yaml
+type: "TwoRows"
+key: "38aab2ca03"
+disable_transition: true
+```
+
+`@part1`
+![](https://assets.datacamp.com/production/repositories/3775/datasets/c8b9b0d83c3699d0fa7f42e40e9394dd684690e9/str_parsing_ex_2.png)
+
+
+`@part2`
+
+
+
+`@script`
+Alter the string in some way....
+
+
+---
+## String Functions
+
+```yaml
+type: "TwoRows"
+key: "1ebabff014"
+disable_transition: true
+```
+
+`@part1`
+![](https://assets.datacamp.com/production/repositories/3775/datasets/e9e8a7040b8cef450434d69949f2eef3b73fd832/str_parsing_ex_3.png)
+
+
+`@part2`
+
+
+
+`@script`
+To give an output.  There's a number of different ways you can alter strings.
+
+
+---
+## Replacing Strings
+
+```yaml
+type: "TwoRows"
+key: "d766fa0596"
+```
+
+`@part1`
+
+
+
+`@part2`
+
+
+
+`@script`
+
+
+
+---
 ## Final Slide
 
 ```yaml
