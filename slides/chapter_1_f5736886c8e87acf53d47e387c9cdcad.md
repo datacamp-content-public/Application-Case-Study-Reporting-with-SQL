@@ -155,7 +155,7 @@ GROUP BY 1
 
 
 `@script`
-You can also use the REPLACE function to remove characters by replacing with empty quotes. Let's use an example from our data here.  In this example, we are replacing all periods with an empty string.  This completely removes the period and is a good way to remove characters from our strings.
+You can also use the REPLACE function to remove characters by replacing with empty quotes. Let's use an example from our data here.  By replacing with empty quotes, this example completely removes the period. Replace is a great way to remove stray characters from our strings.
 
 
 ---
