@@ -260,16 +260,16 @@ key: "7722f2d14d"
 ```
 
 `@part1`
-A a B b C c... all different.
+```A a B b C c``` ... are all unique characters.
 
-```LOWER()``` and ```UPPER()``` changes case.
+```LOWER()``` and ```UPPER()``` changes case.{{1}}
 
 ```sql
 SELECT UPPER(country)
 FROM orders
-```
+```{{2}}
 
-![](https://assets.datacamp.com/production/repositories/3775/datasets/e4d415cfb994adc3ee6c6d1990be0179b0c4555c/upper.png)
+![](https://assets.datacamp.com/production/repositories/3775/datasets/e4d415cfb994adc3ee6c6d1990be0179b0c4555c/upper.png){{3}}
 
 
 `@part2`
@@ -278,6 +278,26 @@ FROM orders
 
 `@script`
 SQL is case sensitive.  That is, a lower case B is considered different than an upper case b.  Often times, the same data is entered in different cases.  If case does not matter for your data, starting all strings with UPPER or LOWER is good practice to keep data consist.
+
+
+---
+## Nesting String Functions
+
+```yaml
+type: "TwoRows"
+key: "128969a52e"
+```
+
+`@part1`
+
+
+
+`@part2`
+
+
+
+`@script`
+In some cases, you may need multiple string functions on the same field.  To do this, you need to nest together string functions.  For example, lets say we need turn this large string into a simple, upper case US.  We need to remove the periods, trim the trailing space, and only take the left 2 characters.  Since each string function outputs a new string, you can have the output of one function be the input of another.  It's important to think about ordering when you nest functions in this way.  For example, we need to trim before we parse the string, as the leading space should not be counted during our left function.
 
 
 ---
