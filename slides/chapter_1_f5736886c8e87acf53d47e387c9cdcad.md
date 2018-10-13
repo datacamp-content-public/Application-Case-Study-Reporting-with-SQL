@@ -17,7 +17,7 @@ title: Business Intelligence Manager
 
 
 `@script`
-So far for this report, we have handled null values and converted data types.  We're almost done.  In previous exercises, may have noticed that some of the strings looked odd, which is common in practice. To clean these messy strings, we need to leverage STRONG PARSING functions.
+In the previous lesson, you may have noticed that some of the strings looked messy, which is common in practice. To clean these messy strings, we need to leverage string functions.
 
 
 ---
@@ -39,7 +39,7 @@ center_content: false
 
 
 `@script`
-Here's it the current state of our report.  Several of the values include extra characters, and groupings do not exist where they should.  Our goal is to get to this stage on the right, where we only include one row for each country.
+Here's where we currently are with report two.  You'll notice several rows that represent the same country are split out. Our goal is to clean up these strings so they group correctly, as shown in our goal table.
 
 
 ---
@@ -51,7 +51,7 @@ key: "84fe86d634"
 ```
 
 `@part1`
-![](https://assets.datacamp.com/production/repositories/3775/datasets/58b76f5155d5f39f9a75e21082f46effa7093da0/str_parsing_ex_1.png)
+![](https://assets.datacamp.com/production/repositories/3775/datasets/58b76f5155d5f39f9a75e21082f46effa7093da0/str_parsing_ex_1.png){{1}}
 
 
 `@part2`
@@ -59,7 +59,7 @@ key: "84fe86d634"
 
 
 `@script`
-A string function must take a string field as the input...
+To alter strings, we use a string function. A string function takes a string as an input...
 
 
 ---
@@ -127,7 +127,7 @@ SELECT REPLACE("Sandwich","wich"," Paper")
 
 
 `@script`
-One way you can alter strings is through replacing part of it.  We do this with the replace function.  You simply select the text you want to replace, indicate what substring to replace, and replace it with a new substring.  In this example, we are replacing the "wich" of sandwich to "paper".  Doing this changes our output string to "Sand Paper".
+One way you can alter strings is through replacing substrings.  We do this with the replace function, which replaces part of our string with a new substring.  In this example, we are looking at the string "sandwich" and replacing the "wich" substring with "paper".  Doing this changes our output string to "Sand Paper".
 
 
 ---
