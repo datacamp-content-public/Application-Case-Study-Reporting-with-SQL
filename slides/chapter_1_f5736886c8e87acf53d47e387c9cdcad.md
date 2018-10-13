@@ -193,7 +193,7 @@ key: "f42bb6c144"
 ```
 
 `@part1`
-
+![](https://assets.datacamp.com/production/repositories/3775/datasets/f6d727a7bab07e2631098e1b5b9b48748e61c856/trim_1.png)
 
 
 `@part2`
@@ -210,10 +210,11 @@ Sometimes, the data is entered with extra spaces at the start or the end.  This 
 ```yaml
 type: "TwoRows"
 key: "664d8efb5a"
+disable_transition: true
 ```
 
 `@part1`
-
+![](https://assets.datacamp.com/production/repositories/3775/datasets/9b17e7df3c84350f4e8cbd314edecf45fbff3955/trim_2.png)
 
 
 `@part2`
@@ -221,7 +222,33 @@ key: "664d8efb5a"
 
 
 `@script`
-...The second row has a leading space, causing the report to output two separate values.  To fix this, we can use the TRIM() function, which removes all leading and trailing spaces.
+...The second row has a leading space, causing the report to output two separate values.
+
+
+---
+## Trimming Spaces
+
+```yaml
+type: "TwoRows"
+key: "25a5e8476c"
+```
+
+`@part1`
+```TRIM()``` removes all trailing and leading spaces.
+
+```sql
+SELECT TRIM(" Sand Paper ")
+```{{1}}
+
+![](https://assets.datacamp.com/production/repositories/3775/datasets/3f6ad3e47a5b7b028528763051f22aa475b293c9/trim_example.png){{2}}
+
+
+`@part2`
+
+
+
+`@script`
+We can fix this issue using the TRIM function, which removes all trailing and leading spaces.  In this example, we remove the extra space at the start and end of sand paper.  Note that we keep the middle space.
 
 
 ---
