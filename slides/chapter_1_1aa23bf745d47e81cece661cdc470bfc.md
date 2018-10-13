@@ -133,13 +133,14 @@ disable_transition: true
 ```yaml
 type: "TwoColumns"
 key: "14e3d5134f"
+disable_transition: false
 ```
 
 `@part1`
-From:
+Current:
 ![](https://assets.datacamp.com/production/repositories/3775/datasets/fdc3e64c7ba39c475bda9e2258937ce1de7afa19/replace_table.PNG)
 
-To:
+Goal:
 ![](https://assets.datacamp.com/production/repositories/3775/datasets/4965640c7f020c64ec70128669f693eb22f7c40d/replace_output.PNG)
 
 
@@ -165,24 +166,27 @@ GROUP BY 1
 ```yaml
 type: "TwoColumns"
 key: "eb8758a494"
+disable_transition: true
 ```
 
 `@part1`
-From:
+Current:
 ![](https://assets.datacamp.com/production/repositories/3775/datasets/3dbee5e624d829e7950a085f0735f4a6f5c2a805/left_table.PNG)
 
-To:
+Goal:
 ![](https://assets.datacamp.com/production/repositories/3775/datasets/79b64d1ed0b2ced379da4f944f348395fbd1ef2e/left_output.PNG)
 
 
 `@part2`
-Use ```LEFT()```, ```RIGHT()```, or ```MID()``` functions to extract a set number of characters.{{1}}
+Must only keep the left 2 characters.{{1}}
+
+Use the ```LEFT()``` function to extract a set number of characters.{{2}}
 
 ```sql
 SELECT LEFT(country,2)
 FROM country_orders
 GROUP BY 1
-```{{2}}
+```{{3}}
 
 
 `@script`
@@ -206,11 +210,51 @@ To:
 
 
 `@part2`
+Most turn all characters to upper case.{{1}}
 
+Use the ```UPPER()``` function.{{2}}
+
+```sql
+SELECT UPPER(country)
+FROM country_orders
+GROUP BY 1
+```{{3}}
 
 
 `@script`
 
+
+
+---
+## Remove Extra Spaces
+
+```yaml
+type: "TwoColumns"
+key: "45f98bef09"
+```
+
+`@part1`
+From:
+![](https://assets.datacamp.com/production/repositories/3775/datasets/1472212859b22f4b5daa39f05a1687472acf7153/trim_table.PNG)
+
+To:
+![](https://assets.datacamp.com/production/repositories/3775/datasets/d9f77d0675da42c7d8a3560bc4990cc36fc63e19/trim_output.PNG)
+
+
+`@part2`
+Must remove excess spaces.{{1}}
+
+Use the ```TRIM()``` function.{{2}}
+
+```sql
+SELECT TRIM(country)
+FROM country_orders
+GROUP BY 1
+```{{3}}
+
+
+`@script`
+You'll notice a standard process here: First, determine how the string needs to change. Second, identify what function to use.  Lastly, update the code.
 
 
 ---
