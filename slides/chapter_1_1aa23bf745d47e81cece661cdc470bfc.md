@@ -20,6 +20,26 @@ In the previous lesson, you may have noticed
 
 
 ---
+## Where we are...
+
+```yaml
+type: "TwoColumns"
+key: "1f5003d939"
+```
+
+`@part1`
+![](https://assets.datacamp.com/production/repositories/3775/datasets/0cf03e1b3a8aaaa27b8f4baa4b855820086c7659/2.4_current_state.PNG)
+
+
+`@part2`
+![](https://assets.datacamp.com/production/repositories/3775/datasets/bbdf7c578bef677413722267295f0f26cc629b61/2.4_goal_state.PNG)
+
+
+`@script`
+
+
+
+---
 ## String Functions
 
 ```yaml
