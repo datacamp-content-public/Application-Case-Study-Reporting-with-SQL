@@ -105,7 +105,7 @@ To give an output.  There's a number of different ways you can alter strings.
 
 
 ---
-## Replacing Strings
+## Replacing a substring
 
 ```yaml
 type: "TwoRows"
@@ -113,7 +113,13 @@ key: "d766fa0596"
 ```
 
 `@part1`
+Replace a substring with a new substring with ```REPLACE()```
 
+```sql
+REPLACE("Sandwich","wich"," Paper")
+```{{1}}
+
+![](https://assets.datacamp.com/production/repositories/3775/datasets/738ff9219cbf37ab01a31948e3c38dee6cb255e3/str_replace.png){{2}}
 
 
 `@part2`
