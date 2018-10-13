@@ -28,11 +28,15 @@ key: "1f5003d939"
 ```
 
 `@part1`
-![](https://assets.datacamp.com/production/repositories/3775/datasets/0cf03e1b3a8aaaa27b8f4baa4b855820086c7659/2.4_current_state.PNG)
+**Current Report:**
+
+![](https://assets.datacamp.com/production/repositories/3775/datasets/5bb6381fe98fbdf50db0d592290157ae51ef282f/2.4_current_state.PNG){{1}}
 
 
 `@part2`
-![](https://assets.datacamp.com/production/repositories/3775/datasets/bbdf7c578bef677413722267295f0f26cc629b61/2.4_goal_state.PNG)
+**Goal Report:**
+
+![](https://assets.datacamp.com/production/repositories/3775/datasets/ae048851b15c2447aeccb2b6b9280d2a2cb53a45/2.4_goal_state.PNG){{2}}
 
 
 `@script`
