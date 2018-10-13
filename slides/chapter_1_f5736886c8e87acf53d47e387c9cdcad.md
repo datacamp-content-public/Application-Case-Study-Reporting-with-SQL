@@ -32,6 +32,7 @@ center_content: false
 
 `@part1`
 How does this look...?
+```SELECT * FROM table```
 
 
 `@script`
@@ -41,7 +42,7 @@ WHERE column = 'Bananas'```
 
 
 ---
-## Insert title here...
+## Full Code Slide
 
 ```yaml
 type: "FullCodeSlide"
@@ -49,7 +50,13 @@ key: "6329bb6322"
 ```
 
 `@part1`
+How does this look...?
 
+```SELECT * FROM table```
+{{1}}
+
+```TEST```
+{{2}}
 
 
 `@script`
