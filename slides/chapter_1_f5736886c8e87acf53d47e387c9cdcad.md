@@ -3,7 +3,7 @@ title: Insert title here
 key: f5736886c8e87acf53d47e387c9cdcad
 
 ---
-## Report 2 - String Parsing
+## Report 2 - Cleaning Strings
 
 ```yaml
 type: "TitleSlide"
@@ -127,7 +127,7 @@ SELECT REPLACE("Sandwich","wich"," Paper")
 
 
 `@script`
-
+One way you can alter strings is through replacing part of it.  We do this with the replace function.  You simply select the text you want to replace, indicate what substring to replace, and replace it with a new substring.  In this example, we are replacing the "wich" of sandwich to "paper".  Doing this changes our output string to "Sand Paper".
 
 
 ---
@@ -139,7 +139,15 @@ key: "4606bca65b"
 ```
 
 `@part1`
+Remove a substring by replacing with an empty string.
 
+```sql
+SELECT REPLACE(country,".","")
+FROM orders
+GROUP BY 1
+```{{1}}
+
+![](https://assets.datacamp.com/production/repositories/3775/datasets/dff2eb2e7732557d549dde641cda1668a30fbf94/str_parsing_remove.png){{2}}
 
 
 `@part2`
@@ -147,11 +155,11 @@ key: "4606bca65b"
 
 
 `@script`
-You can also use the REPLACE function to remove characters by replacing with empty quotes.  For example, you can remove all periods found in our country field through the code shown in the right.
+You can also use the REPLACE function to remove characters by replacing with empty quotes. Let's use an example from our data here.  In this example, we are replacing all periods with an empty string.  This completely removes the period and is a good way to remove characters from our strings.
 
 
 ---
-## Returning a portion of the string
+## Parsing a string
 
 ```yaml
 type: "TwoRows"

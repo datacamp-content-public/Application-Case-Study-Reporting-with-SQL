@@ -174,7 +174,7 @@ Ex().success_msg("Some praise! Then reinforce a learning objective from the exer
 
 ---
 
-## Report 2 - String Parsing
+## Report 2 - Cleaning Strings
 
 ```yaml
 type: VideoExercise
