@@ -136,10 +136,10 @@ key: "14e3d5134f"
 ```
 
 `@part1`
-**Current Report:**
-![](https://assets.datacamp.com/production/repositories/3775/datasets/b1817b0f26944be8101efb4052e03f24241e0b5e/replace_table.PNG)
+From:
+![](https://assets.datacamp.com/production/repositories/3775/datasets/fdc3e64c7ba39c475bda9e2258937ce1de7afa19/replace_table.PNG)
 
-**Goal Report:**
+To:
 ![](https://assets.datacamp.com/production/repositories/3775/datasets/4965640c7f020c64ec70128669f693eb22f7c40d/replace_output.PNG)
 
 
@@ -147,8 +147,38 @@ key: "14e3d5134f"
 Use ```REPLACE()``` function to either replace or remove portions of the string.{{1}}
 
 ```sql
-SELECT REPLACE(country,".","")
-FROM country
+SELECT REPLACE(country,".",""), SUM(revenue)
+FROM country_orders
+GROUP BY 1
+```{{2}}
+
+
+`@script`
+
+
+
+---
+## Parsing Strings
+
+```yaml
+type: "TwoColumns"
+key: "eb8758a494"
+```
+
+`@part1`
+From:
+![](https://assets.datacamp.com/production/repositories/3775/datasets/3dbee5e624d829e7950a085f0735f4a6f5c2a805/left_table.PNG)
+
+To:
+![](https://assets.datacamp.com/production/repositories/3775/datasets/79b64d1ed0b2ced379da4f944f348395fbd1ef2e/left_output.PNG)
+
+
+`@part2`
+Use ```LEFT()```, ```RIGHT()```, or ```MID()``` functions to extract a set number of characters.{{1}}
+
+```sql
+SELECT LEFT(country,2), sum(revenue)
+FROM country_orders
 GROUP BY 1
 ```{{2}}
 
