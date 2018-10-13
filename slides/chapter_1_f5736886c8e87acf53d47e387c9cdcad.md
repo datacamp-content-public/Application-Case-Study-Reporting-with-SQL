@@ -252,6 +252,35 @@ We can fix this issue using the TRIM function, which removes all trailing and le
 
 
 ---
+## Changing Case
+
+```yaml
+type: "TwoRows"
+key: "7722f2d14d"
+```
+
+`@part1`
+A a B b C c... all different.
+
+```LOWER()``` and ```UPPER()``` changes case.
+
+```sql
+SELECT UPPER(country)
+FROM orders
+```
+
+![](https://assets.datacamp.com/production/repositories/3775/datasets/e4d415cfb994adc3ee6c6d1990be0179b0c4555c/upper.png)
+
+
+`@part2`
+
+
+
+`@script`
+SQL is case sensitive.  That is, a lower case B is considered different than an upper case b.  Often times, the same data is entered in different cases.  If case does not matter for your data, starting all strings with UPPER or LOWER is good practice to keep data consist.
+
+
+---
 ## Final Slide
 
 ```yaml
