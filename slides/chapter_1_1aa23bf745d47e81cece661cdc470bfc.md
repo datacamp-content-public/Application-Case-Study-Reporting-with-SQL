@@ -128,6 +128,36 @@ disable_transition: true
 
 
 ---
+## Replacing or Removing Characters
+
+```yaml
+type: "TwoColumns"
+key: "14e3d5134f"
+```
+
+`@part1`
+**Current Report:**
+![](https://assets.datacamp.com/production/repositories/3775/datasets/b1817b0f26944be8101efb4052e03f24241e0b5e/replace_table.PNG)
+
+**Goal Report:**
+![](https://assets.datacamp.com/production/repositories/3775/datasets/4965640c7f020c64ec70128669f693eb22f7c40d/replace_output.PNG)
+
+
+`@part2`
+Use ```REPLACE()``` function to either replace or remove portions of the string.{{1}}
+
+```sql
+SELECT REPLACE(country,".","")
+FROM country
+GROUP BY 1
+```{{2}}
+
+
+`@script`
+
+
+
+---
 ## Final Slide
 
 ```yaml
