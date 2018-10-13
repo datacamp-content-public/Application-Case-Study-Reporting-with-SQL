@@ -147,7 +147,7 @@ To:
 Use ```REPLACE()``` function to either replace or remove portions of the string.{{1}}
 
 ```sql
-SELECT REPLACE(country,".",""), SUM(revenue)
+SELECT REPLACE(country,".","")
 FROM country_orders
 GROUP BY 1
 ```{{2}}
@@ -177,7 +177,7 @@ To:
 Use ```LEFT()```, ```RIGHT()```, or ```MID()``` functions to extract a set number of characters.{{1}}
 
 ```sql
-SELECT LEFT(country,2), sum(revenue)
+SELECT LEFT(country,2)
 FROM country_orders
 GROUP BY 1
 ```{{2}}
