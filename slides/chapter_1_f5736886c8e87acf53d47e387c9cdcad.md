@@ -3,7 +3,7 @@ title: Insert title here
 key: f5736886c8e87acf53d47e387c9cdcad
 
 ---
-## Title Slide
+## Report 2 - String Parsing
 
 ```yaml
 type: "TitleSlide"
@@ -17,86 +17,7 @@ title: Business Intelligence Manager
 
 
 `@script`
-Just testing out this script.
-```SELECT * FROM ....```
-
-
----
-## Full Image Slide
-
-```yaml
-type: "FullImageSlide"
-key: "b0a0668dca"
-center_content: false
-```
-
-`@part1`
-How does this look...?
-```SELECT * FROM table```
-
-
-`@script`
-```SELECT * 
-FROM tables
-WHERE column = 'Bananas'```
-
-
----
-## Full Code Slide
-
-```yaml
-type: "FullCodeSlide"
-key: "6329bb6322"
-```
-
-`@part1`
-How does this look...?
-
-```SELECT * FROM table```
-{{1}}
-
-```TEST```
-{{2}}
-
-
-`@script`
-
-
-
----
-## Insert title here...
-
-```yaml
-type: "FullSlide"
-key: "0f93011cc6"
-```
-
-`@part1`
-
-
-
-`@script`
-
-
-
----
-## Insert title here...
-
-```yaml
-type: "TwoColumns"
-key: "4f9349092c"
-```
-
-`@part1`
-
-
-
-`@part2`
-
-
-
-`@script`
-
+So far for this report, we have handled null values and converted data types.  We're almost done.  In previous exercises, may have noticed that some of the strings looked odd, which is common in practice. To clean these messy strings, we need to leverage STRONG PARSING functions.
 
 
 ---
