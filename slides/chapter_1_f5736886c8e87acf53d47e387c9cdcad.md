@@ -281,27 +281,56 @@ SQL is case sensitive.  That is, a lower case B is considered different than an 
 
 
 ---
-## Nesting String Functions
+## Nesting Functions
 
 ```yaml
-type: "TwoRows"
-key: "128969a52e"
+type: "TwoRowsTwoColumns"
+key: "443bee32e9"
+disable_transition: true
 ```
 
 `@part1`
-
+_Input:_{{1}}
+```
+   U.S. - United States
+```{{1}}
+_Output:_{{2}}
+```
+US
+```{{2}}
 
 
 `@part2`
+1) Remove Periods{{3}}
+```sql
+REPLACE(country,".","")
+```{{3}}
+
+2) Trim Spaces{{4}}
+```sql
+TRIM(REPLACE(country,".",""))
+```{{4}}
+
+3) Left Two Characters{{5}}
+```sql
+LEFT(TRIM(REPLACE(country,".","")),2)
+```{{5}}
+
+
+`@part3`
+
+
+
+`@part4`
 
 
 
 `@script`
-In some cases, you may need multiple string functions on the same field.  To do this, you need to nest together string functions.  For example, lets say we need turn this large string into a simple, upper case US.  We need to remove the periods, trim the trailing space, and only take the left 2 characters.  Since each string function outputs a new string, you can have the output of one function be the input of another.  It's important to think about ordering when you nest functions in this way.  For example, we need to trim before we parse the string, as the leading space should not be counted during our left function.
+In some cases, you may need multiple string functions on the same field.  To do this, we will need to nest together multiple functions.  For example, lets say we need turn this large string into a simple, upper case US.  We need to remove the periods, trim the trailing space, and only take the left 2 characters.  Since each string function outputs a new string, you can have the output of one function be the input of another.  It's important to think about ordering when you nest functions in this way.  For example, we need to trim before we parse the string, as the leading space should not be counted during our left function. Although the code may get complicated here, thinking about it in a step-by-step fashion should make it easier to understand.
 
 
 ---
-## Final Slide
+## Lets Build!
 
 ```yaml
 type: "FinalSlide"
@@ -309,5 +338,5 @@ key: "3aa5d8f480"
 ```
 
 `@script`
-
+That's it for string functions.  Now lets use what we learned and finish up report 2.
 
