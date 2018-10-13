@@ -116,10 +116,56 @@ key: "d766fa0596"
 Replace a substring with a new substring with ```REPLACE()```
 
 ```sql
-REPLACE("Sandwich","wich"," Paper")
+SELECT REPLACE("Sandwich","wich"," Paper")
 ```{{1}}
 
 ![](https://assets.datacamp.com/production/repositories/3775/datasets/738ff9219cbf37ab01a31948e3c38dee6cb255e3/str_replace.png){{2}}
+
+
+`@part2`
+
+
+
+`@script`
+
+
+
+---
+## Removing a substring
+
+```yaml
+type: "TwoRows"
+key: "4606bca65b"
+```
+
+`@part1`
+
+
+
+`@part2`
+
+
+
+`@script`
+You can also use the REPLACE function to remove characters by replacing with empty quotes.  For example, you can remove all periods found in our country field through the code shown in the right.
+
+
+---
+## Returning a portion of the string
+
+```yaml
+type: "TwoRows"
+key: "5d2607792b"
+```
+
+`@part1`
+```LEFT()```, ```RIGHT()```, and ```MID()``` allows you to pull out a portion of a string.
+
+```sql
+SELECT LEFT("Sandwich",4)
+```{{1}}
+
+![](https://assets.datacamp.com/production/repositories/3775/datasets/182701764d84becf7fc1805cc50c3ac9bc247342/str_left.png){{2}}
 
 
 `@part2`
