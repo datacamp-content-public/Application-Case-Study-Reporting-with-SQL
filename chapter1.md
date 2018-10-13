@@ -174,7 +174,7 @@ Ex().success_msg("Some praise! Then reinforce a learning objective from the exer
 
 ---
 
-## Report 2 - Cleaning Strings
+## Report 2 - Cleaning Strings Syntax
 
 ```yaml
 type: VideoExercise
@@ -184,3 +184,16 @@ xp: 50
 
 `@projector_key`
 f5736886c8e87acf53d47e387c9cdcad
+
+---
+
+## Report 2 - Cleaning Strings
+
+```yaml
+type: VideoExercise
+key: 0a63838982
+xp: 50
+```
+
+`@projector_key`
+1aa23bf745d47e81cece661cdc470bfc
