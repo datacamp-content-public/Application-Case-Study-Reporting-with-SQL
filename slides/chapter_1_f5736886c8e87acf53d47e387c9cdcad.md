@@ -181,7 +181,7 @@ SELECT LEFT("Sandwich",4)
 
 
 `@script`
-Another way to alter strings is through parsing functions.  The LEFT, RIGHT, and MID functions allow you to pull a set number of characters of your string.  In this example, we are taking the left 4 characters of the word "Sandwich" to output "sand".
+Another way to alter strings is through parsing functions.  The LEFT, RIGHT, and MID functions allow you to pull a set number of characters of your string.  In this example, we are taking the left 4 characters of the word "Sandwich" to output "sand".  Right and MID work in similar ways, they just start at different points in the string.
 
 
 ---
