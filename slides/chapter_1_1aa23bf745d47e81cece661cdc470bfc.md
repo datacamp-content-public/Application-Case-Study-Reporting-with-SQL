@@ -314,11 +314,11 @@ disable_transition: true
 
 
 `@part2`
-![](https://assets.datacamp.com/production/repositories/3775/datasets/f3e18a46a77e6ec0d87e3597079669036d6a0018/2.4_left_error.PNG)
+![](https://assets.datacamp.com/production/repositories/3775/datasets/f3e18a46a77e6ec0d87e3597079669036d6a0018/2.4_left_error.PNG){{1}}
 
 
 `@script`
-Do note that the order of the nesting matters.  If you used the LEFT function first, it would incorrectly include extra characters, such as periods or spaces.
+Do note that the order of the nesting matters.  In our example, if you used the LEFT function first, it would incorrectly keep extra characters, such as periods or spaces. You need to ensure the functions are nested in a logical order.
 
 
 ---
