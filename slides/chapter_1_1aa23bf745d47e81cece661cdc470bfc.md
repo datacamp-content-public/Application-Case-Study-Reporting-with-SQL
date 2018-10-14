@@ -195,7 +195,7 @@ GROUP BY 1
 
 
 `@script`
-A common occurrence is inconsistent case among values. In this example, we have the US split up into two rows, one for upper case and one for lower. We can use the UPPER or LOWER function to solve this one. In general, common practice is to ensure all strings have the same case with one of these functions, assuming values of different cases should be treated the same.
+A common occurrence is inconsistent case among values. In this example, we have the US split up into two rows, one for upper case and one for lower. SQL will read these as separate values. We can use the UPPER or LOWER function to solve this one. In a lot of cases, good practice is to have all strings be of the same case.
 
 
 ---
@@ -243,23 +243,23 @@ Steps:{{1}}
 
 ```sql
 REPLACE(country,".","")
-```{{2}}
+```{{1}}
 
 ```sql
 TRIM(country)
-```{{3}}
+```{{1}}
 
 ```sql
 LEFT(country,2)
-```{{4}}
+```{{1}}
 
 ```sql
 UPPER(country)
-```{{5}}
+```{{1}}
 
 
 `@script`
-When dealing with data, you may need to use multiple string functions on the same field.  In this example, we need to include four functions: REPLACE, TRIM, LEFT, and UPPER.  You do this by nesting fields.  Since each string function outputs a string, you can use it as the input of the next function.
+So there's a few ways you can alter string values.  Now often times, you may need to use multiple functions on the same field.  You do this by nesting functions.  Since each string function outputs a string, you can use it as the input of the next function. In our example, we need to include all 4 of these functions: REPLACE, TRIM, LEFT, and UPPER.
 
 
 ---
@@ -288,16 +288,16 @@ LEFT(TRIM(REPLACE(country,".","")),2)
 UPPER(LEFT(TRIM(REPLACE(country,".","")),2))
 ```{{4}}
 
-Final Code:{{5}}
+Final Code:
 ```sql
 SELECT UPPER(LEFT(TRIM(REPLACE(country,".","")),2))
 FROM country_orders
 GROUP BY 1
-```{{6}}
+```{{5}}
 
 
 `@script`
-Let's take this step by step.  First, we want to REPLACE the string.  Next, we want to TRIM it, so we add that OUTSIDE of the replace function.  We do the same thing to take the first two characters with LEFT.  And again for UPPER.  The final query is a good amount of code, but taking it step-by-step allows you to set it up in a clear, logical way.  Our final code will look likle this.
+Let's take this step by step.  First, we want to REPLACE the string.  Next, we want to TRIM it, so we add that OUTSIDE of the replace function.  We do the same thing to take the first two characters with LEFT.  And again for UPPER.  The final query is a good amount of code, but taking it step-by-step allows you to set it up in a clear, logical way.
 
 
 ---
@@ -318,7 +318,7 @@ disable_transition: true
 
 
 `@script`
-Do note that the order of the nesting matters.  In our example, if you used the LEFT function first, it would incorrectly keep extra characters, such as periods or spaces. You need to ensure the functions are nested in a logical order.
+Do note that the order of the nesting matters.  In our example, if you used the LEFT function first, it would incorrectly keep extra characters, such as periods or spaces. Take some time to think IN WHAT ORDER the functions should be nested.
 
 
 ---
