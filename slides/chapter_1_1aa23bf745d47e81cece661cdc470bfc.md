@@ -49,16 +49,32 @@ Here’s where we currently are with our report.  You’ll notice there are mult
 
 ```yaml
 type: "FullSlide"
-key: "9d2a8053c1"
-disable_transition: false
+key: "ebff6bc1f1"
 ```
 
 `@part1`
-![](https://assets.datacamp.com/production/repositories/3775/datasets/d7f7cc82a54ad38e9baa52e160b97ec85a5a1a4a/functions_1.png){{1}}
+![](https://assets.datacamp.com/production/repositories/3775/datasets/0728db42eee06f232c857dfe6ac2c7ef403d767a/functions_0.png){{1}}
 
 
 `@script`
-We clean up string values using STRING FUNCTIONS.  There’s a number of SQL functions at our disposal.  In order to figure out what function to use, identify what action should be taken on the string.  If we need to replace or remove part of a string, we can use the REPLACE function.
+We clean up string values using STRING FUNCTIONS.  There’s a number of SQL functions at our disposal.  In order to figure out what function to use, identify what action should be taken on the string.
+
+
+---
+## String Functions
+
+```yaml
+type: "FullSlide"
+key: "9d2a8053c1"
+disable_transition: true
+```
+
+`@part1`
+![](https://assets.datacamp.com/production/repositories/3775/datasets/d7f7cc82a54ad38e9baa52e160b97ec85a5a1a4a/functions_1.png)
+
+
+`@script`
+If we need to replace or remove part of a string, we can use the REPLACE function.
 
 
 ---
