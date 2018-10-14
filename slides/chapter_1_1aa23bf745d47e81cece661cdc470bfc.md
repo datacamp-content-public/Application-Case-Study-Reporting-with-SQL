@@ -197,7 +197,7 @@ GROUP BY 1
 
 
 `@script`
-Often times, you’ll notice that data does not have consistent CASE.  That is, some letters are lowercase and some are uppercase in an inconsistent way.  The same value with different cases will appear as two separate rows within our report.  In most cases, these should be grouped into the same row.  We can use the UPPER, LOWER, or in some cases PROPER functions to convert the case of all string values to be consistent.  A best practice is to have all strings be either UPPER or LOWER if you feel cases may be inconsistent.
+A common occurrence is inconsistent case among values. In this example, we have the US split up into two rows, one for upper case and one for lower. We can use the UPPER or LOWER function to solve this one. In general, common practice is to ensure all strings have the same case with one of these functions, assuming values of different cases should be treated the same.
 
 
 ---
