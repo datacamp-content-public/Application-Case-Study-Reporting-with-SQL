@@ -243,6 +243,22 @@ Sometimes, data has some extra spaces, either at the start or the end of a strin
 
 
 ---
+## Functions Recap
+
+```yaml
+type: "FullSlide"
+key: "03a07d94f9"
+```
+
+`@part1`
+![](https://assets.datacamp.com/production/repositories/3775/datasets/853ad3e280584c85902a21cc9a5911502db6203f/functions_5.png)
+
+
+`@script`
+So there's a few examples of functions that alter string values. Now often times, you may need to use multiple functions on the same field.
+
+
+---
 ## Nesting Functions
 
 ```yaml
@@ -275,7 +291,7 @@ UPPER(country)
 
 
 `@script`
-So there's a few ways you can alter string values.  Now often times, you may need to use multiple functions on the same field.  You do this by nesting functions.  Since each string function outputs a string, you can use it as the input of the next function. In our example, we need to include all 4 of these functions: REPLACE, TRIM, LEFT, and UPPER.
+You do this by nesting functions.  Since each string function outputs a string, you can use it as the input of the next function. In our example, we need to include all 4 of these functions: REPLACE, TRIM, LEFT, and UPPER.
 
 
 ---
