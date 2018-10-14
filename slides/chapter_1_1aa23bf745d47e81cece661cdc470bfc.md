@@ -138,7 +138,7 @@ GROUP BY 1
 
 
 `@script`
-Let's go over some examples.  Our report has two values for the UK, one of which includes periods. We need to remove these periods.  The REPLACE function allows us to replace a substring with nothing, which you do by replacing with empty quotes.
+Let's go over some examples.  Our report has two values for the UK, one of which includes periods. We need to remove these periods.  The REPLACE function allows us to replace a substring with a new substring. You can remove the substring completely by replacing with empty quotes, as shown.
 
 
 ---
@@ -147,7 +147,7 @@ Let's go over some examples.  Our report has two values for the UK, one of which
 ```yaml
 type: "TwoColumns"
 key: "eb8758a494"
-disable_transition: true
+disable_transition: false
 ```
 
 `@part1`
@@ -169,7 +169,7 @@ GROUP BY 1
 
 
 `@script`
-Here, we have some extra characters.  We only care to take the first two characters to get an abbreviated country.  Using the LEFT function, we can select only the first two characters and ensure our report shows just the abbreviation.  The RIGHT and MID functions can work as well, depending on what part of the string you need to parse out.
+In this example, we have two values for china, one of which has extra characters. But we only care about the first two characters. You can extract only the first N characters using the LEFT function.  By setting N to 2, we can solve this problem.
 
 
 ---
