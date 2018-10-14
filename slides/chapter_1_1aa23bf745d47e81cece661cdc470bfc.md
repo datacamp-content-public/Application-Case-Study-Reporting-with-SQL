@@ -197,7 +197,7 @@ key: "3fd76c0e8b"
 `@part1`
 ![](https://assets.datacamp.com/production/repositories/3775/datasets/0aa354a7ab9aef85ae3c31fe3f5d39a3e20f8d64/upper_table.PNG)
 
-CASE should should be consistent.{{1}}
+CASE should be consistent.{{1}}
 
 ```sql
 SELECT UPPER(country)
@@ -225,7 +225,7 @@ key: "45f98bef09"
 `@part1`
 ![](https://assets.datacamp.com/production/repositories/3775/datasets/1472212859b22f4b5daa39f05a1687472acf7153/trim_table.PNG)
 
-Remove trailing spaces.{{1}}
+Remove trailing & leading spaces.{{1}}
 
 ```sql
 SELECT TRIM(country)
