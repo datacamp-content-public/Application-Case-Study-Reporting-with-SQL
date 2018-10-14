@@ -109,7 +109,7 @@ disable_transition: true
 
 
 `@script`
-And if you want to remove trailing or leading spaces from a string, you can use the TRIM function.
+And to remove extra spaces, we use the TRIM function.
 
 
 ---
