@@ -183,7 +183,7 @@ key: "3fd76c0e8b"
 `@part1`
 ![](https://assets.datacamp.com/production/repositories/3775/datasets/0aa354a7ab9aef85ae3c31fe3f5d39a3e20f8d64/upper_table.PNG)
 
-All values should be uppercase.{{1}}
+CASE should should be consistent.{{1}}
 
 ```sql
 SELECT UPPER(country)
@@ -225,7 +225,7 @@ GROUP BY 1
 
 
 `@script`
-Another common problem is data that is entered with extra spaces.  These are particularly dangerous because it could be invisible to the eye that the two values are different, and when you see it in a report, you can have two separate rows that appear to contain the same value.  The solution here is to use a TRIM function, which simply removes all leading and trailing spaces while keeping all inner spaces. You'll notice a standard process here: First, determine how the string needs to change. Second, identify what function to use.  Lastly, update the code.
+Sometimes, data has some extra spaces, either at the start or the end of a string. The solution here is to use a TRIM function, which simply removes all leading and trailing spaces.  Note that this does keep spaces found within the string.
 
 
 ---
