@@ -155,8 +155,6 @@ disable_transition: false
 
 Keep only the first 2 characters.{{1}}
 
-```LEFT()``` function extracts first N characters.{{2}}
-
 ```sql
 SELECT LEFT(country,2)
 FROM country_orders
@@ -241,23 +239,23 @@ key: "c1b8f964b8"
 
 
 `@part2`
-Steps:
+Steps:{{1}}
 
 ```sql
 REPLACE(country,".","")
-```
+```{{2}}
 
 ```sql
 TRIM(country)
-```
+```{{3}}
 
 ```sql
 LEFT(country,2)
-```
+```{{4}}
 
 ```sql
 UPPER(country)
-```
+```{{5}}
 
 
 `@script`
