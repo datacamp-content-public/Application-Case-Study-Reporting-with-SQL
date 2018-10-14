@@ -3,7 +3,7 @@ title: Insert title here
 key: 1aa23bf745d47e81cece661cdc470bfc
 
 ---
-## Title Slide
+## Report 2 - Cleaning Strings
 
 ```yaml
 type: "TitleSlide"
@@ -11,12 +11,13 @@ key: "1ad85bdd93"
 ```
 
 `@lower_third`
-name: Name Surname
-title: Instructor
+
+name: Tyler Pernes
+title: DataCamp Instructor
 
 
 `@script`
-In the previous lesson, you may have noticed
+In the previous lesson, you may have noticed that the format of values in the “country” field is not consistent.  This is common in real world examples – data may not be input in consistent ways.  Because of this, it’s important to understand how to clean up messy string values to ensure our report has consistent values.
 
 
 ---
@@ -40,23 +41,7 @@ key: "1f5003d939"
 
 
 `@script`
-
-
-
----
-## String Functions
-
-```yaml
-type: "FullSlide"
-key: "0c8e618a96"
-```
-
-`@part1`
-
-
-
-`@script`
-
+Here’s where we currently are with our report.  You’ll notice there are multiple rows for each country.  What we want is to clean up these values so that we only see 1 row for each country.
 
 
 ---
@@ -65,15 +50,15 @@ key: "0c8e618a96"
 ```yaml
 type: "FullSlide"
 key: "9d2a8053c1"
-disable_transition: true
+disable_transition: false
 ```
 
 `@part1`
-![](https://assets.datacamp.com/production/repositories/3775/datasets/d7f7cc82a54ad38e9baa52e160b97ec85a5a1a4a/functions_1.png)
+![](https://assets.datacamp.com/production/repositories/3775/datasets/d7f7cc82a54ad38e9baa52e160b97ec85a5a1a4a/functions_1.png){{1}}
 
 
 `@script`
-
+We can clean up these values using STRING FUNCTIONS.  There’s a number of functions that act on strings.  To identify what function you should use, identify how you want to change the field.  To replace or remove part of a string, you can use the REPLACE function.
 
 
 ---
@@ -90,7 +75,7 @@ disable_transition: true
 
 
 `@script`
-
+To parse out a section of the string, you can leverage the LEFT, RIGHT, or MID functions.
 
 
 ---
@@ -107,7 +92,7 @@ disable_transition: true
 
 
 `@script`
-
+To keep the case of your strings consistent, you can use the UPPER or LOWER functions.
 
 
 ---
@@ -124,7 +109,7 @@ disable_transition: true
 
 
 `@script`
-
+And if you want to remove trailing or leading spaces from a string, you can use the TRIM function.
 
 
 ---
@@ -137,17 +122,11 @@ disable_transition: false
 ```
 
 `@part1`
-Current:
 ![](https://assets.datacamp.com/production/repositories/3775/datasets/fdc3e64c7ba39c475bda9e2258937ce1de7afa19/replace_table.PNG)
 
-Goal:
-![](https://assets.datacamp.com/production/repositories/3775/datasets/4965640c7f020c64ec70128669f693eb22f7c40d/replace_output.PNG)
-
-
-`@part2`
 Must remove all periods from the strings.{{1}}
 
-Use the ```REPLACE()``` function to remove or replace characters.{{2}}
+```REPLACE()``` function can remove characters.{{2}}
 
 ```sql
 SELECT REPLACE(country,".","")
@@ -156,8 +135,12 @@ GROUP BY 1
 ```{{3}}
 
 
-`@script`
+`@part2`
 
+
+
+`@script`
+Let’s dig deeper into these functions.  In our report, we have multiple rows for the UK, one of which includes periods. We need to clean the country field by removing these periods.  The replace function can allow us to replace a substring, in this case a period, with a new substring.  By replacing an empty string, you can remove the character entirely.  This is a great way to remove any stray characters from your report.
 
 
 ---
@@ -170,17 +153,11 @@ disable_transition: true
 ```
 
 `@part1`
-Current:
 ![](https://assets.datacamp.com/production/repositories/3775/datasets/3dbee5e624d829e7950a085f0735f4a6f5c2a805/left_table.PNG)
 
-Goal:
-![](https://assets.datacamp.com/production/repositories/3775/datasets/79b64d1ed0b2ced379da4f944f348395fbd1ef2e/left_output.PNG)
+Keep only the first 2 characters.{{1}}
 
-
-`@part2`
-Must only keep the left 2 characters.{{1}}
-
-Use the ```LEFT()``` function to extract a set number of characters.{{2}}
+```LEFT()``` function extracts first N characters.{{2}}
 
 ```sql
 SELECT LEFT(country,2)
@@ -189,8 +166,12 @@ GROUP BY 1
 ```{{3}}
 
 
-`@script`
+`@part2`
 
+
+
+`@script`
+Here, we have some extra characters.  We only care to take the first two characters to get an abbreviated country.  Using the LEFT function, we can select only the first two characters and ensure our report shows just the abbreviation.  The RIGHT and MID functions can work as well, depending on what part of the string you need to parse out.
 
 
 ---
@@ -202,27 +183,23 @@ key: "3fd76c0e8b"
 ```
 
 `@part1`
-From:
 ![](https://assets.datacamp.com/production/repositories/3775/datasets/0aa354a7ab9aef85ae3c31fe3f5d39a3e20f8d64/upper_table.PNG)
 
-To:
-![](https://assets.datacamp.com/production/repositories/3775/datasets/6c5fddf16b295446f1f484fbb07b9947b223cd1b/upper_output.PNG)
-
-
-`@part2`
-Most turn all characters to upper case.{{1}}
-
-Use the ```UPPER()``` function.{{2}}
+All values should be uppercase.{{1}}
 
 ```sql
 SELECT UPPER(country)
 FROM country_orders
 GROUP BY 1
-```{{3}}
+```{{2}}
+
+
+`@part2`
+
 
 
 `@script`
-
+Often times, you’ll notice that data does not have consistent CASE.  That is, some letters are lowercase and some are uppercase in an inconsistent way.  The same value with different cases will appear as two separate rows within our report.  In most cases, these should be grouped into the same row.  We can use the UPPER, LOWER, or in some cases PROPER functions to convert the case of all string values to be consistent.  A best practice is to have all strings be either UPPER or LOWER if you feel cases may be inconsistent.
 
 
 ---
@@ -234,27 +211,23 @@ key: "45f98bef09"
 ```
 
 `@part1`
-From:
 ![](https://assets.datacamp.com/production/repositories/3775/datasets/1472212859b22f4b5daa39f05a1687472acf7153/trim_table.PNG)
 
-To:
-![](https://assets.datacamp.com/production/repositories/3775/datasets/d9f77d0675da42c7d8a3560bc4990cc36fc63e19/trim_output.PNG)
-
-
-`@part2`
-Must remove excess spaces.{{1}}
-
-Use the ```TRIM()``` function.{{2}}
+Remove trailing spaces.{{1}}
 
 ```sql
 SELECT TRIM(country)
 FROM country_orders
 GROUP BY 1
-```{{3}}
+```{{2}}
+
+
+`@part2`
+
 
 
 `@script`
-You'll notice a standard process here: First, determine how the string needs to change. Second, identify what function to use.  Lastly, update the code.
+Another common problem is data that is entered with extra spaces.  These are particularly dangerous because it could be invisible to the eye that the two values are different, and when you see it in a report, you can have two separate rows that appear to contain the same value.  The solution here is to use a TRIM function, which simply removes all leading and trailing spaces while keeping all inner spaces. You'll notice a standard process here: First, determine how the string needs to change. Second, identify what function to use.  Lastly, update the code.
 
 
 ---
