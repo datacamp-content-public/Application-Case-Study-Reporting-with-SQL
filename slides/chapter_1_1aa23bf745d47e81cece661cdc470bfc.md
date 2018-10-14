@@ -261,7 +261,46 @@ UPPER(country)
 
 
 `@script`
-You may find that a given field needs multiple functions acted on it.  In our example, in order to update all values in one query, we need the country field to include all four functions.  Replace, LEFT, UPPER, and TRIM.  To do this, you need to nest function together.  Remember that these string functions output a new string.  This means the output of one string function can be the input of another.  Taken step by step, you can combine them, as so.  Do take a moment to think about the order here.  If you were to use LEFT function first, then you would incorrectly output spaces and periods.
+When dealing with data, you may need to use multiple string functions on the same field.  In this example, we need to include four functions: REPLACE, TRIM, LEFT, and UPPER.  You do this by nesting fields.  Since each string function outputs a string, you can use it as the input of the next function.
+
+
+---
+## Take it step-by-step
+
+```yaml
+type: "FullCodeSlide"
+key: "8bc4671482"
+```
+
+`@part1`
+Step-by-step:
+
+```sql
+REPLACE(country,".","")
+```
+
+```sql
+TRIM(REPLACE(country,".",""))
+```
+
+```sql
+LEFT(TRIM(REPLACE(country,".","")),2)
+```
+
+```sql
+UPPER(LEFT(TRIM(REPLACE(country,".","")),2))
+```
+
+Final Code:
+```sql
+SELECT UPPER(LEFT(TRIM(REPLACE(country,".","")),2))
+FROM country_orders
+GROUP BY 1
+```
+
+
+`@script`
+Let's take this step by step.  First, we want to REPLACE the string.  Next, we want to TRIM it, so we add that OUTSIDE of the replace function.  We do the same thing to take the first two characters with LEFT.  And again for UPPER.  Overall, the final code gets a bit messy, but taking it step-by-step helps you build it logically.
 
 
 ---
@@ -282,50 +321,11 @@ disable_transition: true
 
 
 `@script`
-
-
-
----
-## Take it step-by-step
-
-```yaml
-type: "FullCodeSlide"
-key: "8bc4671482"
-```
-
-`@part1`
-Final Code:
-```sql
-SELECT UPPER(LEFT(TRIM(REPLACE(country,".","")),2))
-FROM country_orders
-GROUP BY 1
-```
-
-Step-by-step:
-
-```sql
-REPLACE(country,".","")
-```
-
-```sql
-TRIM(REPLACE(country,".",""))
-```
-
-```sql
-LEFT(TRIM(REPLACE(country,".","")),2)
-```
-
-```sql
-UPPER(LEFT(TRIM(REPLACE(country,".","")),2))
-```
-
-
-`@script`
-
+Do note that the order of the nesting matters.  If you used the LEFT function first, it would incorrectly include extra characters, such as periods or spaces.
 
 
 ---
-## Final Slide
+## Time to build!
 
 ```yaml
 type: "FinalSlide"
@@ -333,5 +333,5 @@ key: "f06e0482bb"
 ```
 
 `@script`
-
+So that's how you clean messy strings in your data.  Let's put this to action and use these tactics on our report.
 
