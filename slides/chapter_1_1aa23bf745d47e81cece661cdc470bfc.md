@@ -58,7 +58,7 @@ disable_transition: false
 
 
 `@script`
-We can clean up these values using STRING FUNCTIONS.  There’s a number of functions that act on strings.  To identify what function you should use, identify how you want to change the field.  To replace or remove part of a string, you can use the REPLACE function.
+We clean up string values using STRING FUNCTIONS.  There’s a number of SQL functions at our disposal.  In order to figure out what function to use, identify what action should be taken on the string.  If we need to replace or remove part of a string, we can use the REPLACE function.
 
 
 ---
@@ -75,7 +75,7 @@ disable_transition: true
 
 
 `@script`
-To parse out a section of the string, you can leverage the LEFT, RIGHT, or MID functions.
+To parse out a portion of the string, leverage the LEFT, RIGHT, or MID functions.
 
 
 ---
@@ -92,7 +92,7 @@ disable_transition: true
 
 
 `@script`
-To keep the case of your strings consistent, you can use the UPPER or LOWER functions.
+For consistent CASE of our strings, we can use the UPPER, LOWER, or PROPER functions.
 
 
 ---
