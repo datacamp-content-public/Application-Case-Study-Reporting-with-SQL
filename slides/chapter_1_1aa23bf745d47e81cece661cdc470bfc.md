@@ -297,7 +297,7 @@ GROUP BY 1
 
 
 `@script`
-Let's take this step by step.  First, we want to REPLACE the string.  Next, we want to TRIM it, so we add that OUTSIDE of the replace function.  We do the same thing to take the first two characters with LEFT.  And again for UPPER.  The final query is a good amount of code, but taking it step-by-step allows you to set it up in a clear, logical way.
+Let's take this step by step.  First, we want to REPLACE the string.  Next, we want to TRIM it, so we add that OUTSIDE of the replace function.  We do the same thing to take the first two characters with LEFT.  And again for UPPER.  The final query is a good amount of code, but taking it step-by-step allows you to set it up in a clear, logical way.  Our final code will look likle this.
 
 
 ---
