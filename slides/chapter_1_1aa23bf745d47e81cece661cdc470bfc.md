@@ -330,5 +330,5 @@ key: "f06e0482bb"
 ```
 
 `@script`
-So that's how you clean messy strings in your data.  Let's put this to action and use these tactics on our report.
+So that's it for cleaning strings.  Let's put this to action and use these techniques to build out our report.
 
