@@ -17,7 +17,7 @@ title: DataCamp Instructor
 
 
 `@script`
-Real-world data is often messy, especially when dealing with strings. Since there are many different ways to format strings, it's important to understand how to clean them accordingly.
+Real-world data is often messy, especially when dealing with strings. Since there are many different ways to format strings, it's important to understand how to clean them correctly.
 
 
 ---
