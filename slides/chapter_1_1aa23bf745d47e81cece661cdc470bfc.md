@@ -17,7 +17,7 @@ title: DataCamp Instructor
 
 
 `@script`
-In the previous lesson, you may have noticed that the format of values in the “country” field is not consistent.  This is common in real world examples – data may not be input in consistent ways.  Because of this, it’s important to understand how to clean up messy string values to ensure our report has consistent values.
+Real-world data is often messy, especially when dealing with strings. Since there are many different ways to format strings, it's important to understand how to clean them accordingly.
 
 
 ---
@@ -228,6 +228,102 @@ GROUP BY 1
 
 `@script`
 Another common problem is data that is entered with extra spaces.  These are particularly dangerous because it could be invisible to the eye that the two values are different, and when you see it in a report, you can have two separate rows that appear to contain the same value.  The solution here is to use a TRIM function, which simply removes all leading and trailing spaces while keeping all inner spaces. You'll notice a standard process here: First, determine how the string needs to change. Second, identify what function to use.  Lastly, update the code.
+
+
+---
+## Nesting Functions
+
+```yaml
+type: "TwoColumns"
+key: "c1b8f964b8"
+```
+
+`@part1`
+![](https://assets.datacamp.com/production/repositories/3775/datasets/5bb6381fe98fbdf50db0d592290157ae51ef282f/2.4_current_state.PNG)
+
+
+`@part2`
+Steps:
+
+```sql
+REPLACE(country,".","")
+```
+
+```sql
+TRIM(country)
+```
+
+```sql
+LEFT(country,2)
+```
+
+```sql
+UPPER(country)
+```
+
+
+`@script`
+You may find that a given field needs multiple functions acted on it.  In our example, in order to update all values in one query, we need the country field to include all four functions.  Replace, LEFT, UPPER, and TRIM.  To do this, you need to nest function together.  Remember that these string functions output a new string.  This means the output of one string function can be the input of another.  Taken step by step, you can combine them, as so.  Do take a moment to think about the order here.  If you were to use LEFT function first, then you would incorrectly output spaces and periods.
+
+
+---
+## Nesting Order Matters
+
+```yaml
+type: "TwoColumns"
+key: "b739d7c240"
+disable_transition: true
+```
+
+`@part1`
+![](https://assets.datacamp.com/production/repositories/3775/datasets/5bb6381fe98fbdf50db0d592290157ae51ef282f/2.4_current_state.PNG)
+
+
+`@part2`
+![](https://assets.datacamp.com/production/repositories/3775/datasets/f3e18a46a77e6ec0d87e3597079669036d6a0018/2.4_left_error.PNG)
+
+
+`@script`
+
+
+
+---
+## Take it step-by-step
+
+```yaml
+type: "FullCodeSlide"
+key: "8bc4671482"
+```
+
+`@part1`
+Final Code:
+```sql
+SELECT UPPER(LEFT(TRIM(REPLACE(country,".","")),2))
+FROM country_orders
+GROUP BY 1
+```
+
+Step-by-step:
+
+```sql
+REPLACE(country,".","")
+```
+
+```sql
+TRIM(REPLACE(country,".",""))
+```
+
+```sql
+LEFT(TRIM(REPLACE(country,".","")),2)
+```
+
+```sql
+UPPER(LEFT(TRIM(REPLACE(country,".","")),2))
+```
+
+
+`@script`
+
 
 
 ---
