@@ -41,7 +41,7 @@ key: "1f5003d939"
 
 
 `@script`
-Here’s where we currently are with our report.  You’ll notice there are multiple rows for each country.  What we want is to clean up these values so that we only see 1 row for each country.
+Here’s where we currently are with our report.  You’ll notice there are multiple rows for each country.  Our goal is to clean up these values so that we accurately output only 1 row for each country.
 
 
 ---
