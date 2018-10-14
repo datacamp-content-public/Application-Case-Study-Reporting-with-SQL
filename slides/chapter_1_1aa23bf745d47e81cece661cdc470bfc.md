@@ -272,33 +272,32 @@ key: "8bc4671482"
 
 `@part1`
 Step-by-step:
-
 ```sql
 REPLACE(country,".","")
-```
+```{{1}}
 
 ```sql
 TRIM(REPLACE(country,".",""))
-```
+```{{2}}
 
 ```sql
 LEFT(TRIM(REPLACE(country,".","")),2)
-```
+```{{3}}
 
 ```sql
 UPPER(LEFT(TRIM(REPLACE(country,".","")),2))
-```
+```{{4}}
 
-Final Code:
+Final Code:{{5}}
 ```sql
 SELECT UPPER(LEFT(TRIM(REPLACE(country,".","")),2))
 FROM country_orders
 GROUP BY 1
-```
+```{{6}}
 
 
 `@script`
-Let's take this step by step.  First, we want to REPLACE the string.  Next, we want to TRIM it, so we add that OUTSIDE of the replace function.  We do the same thing to take the first two characters with LEFT.  And again for UPPER.  Overall, the final code gets a bit messy, but taking it step-by-step helps you build it logically.
+Let's take this step by step.  First, we want to REPLACE the string.  Next, we want to TRIM it, so we add that OUTSIDE of the replace function.  We do the same thing to take the first two characters with LEFT.  And again for UPPER.  The final query is a good amount of code, but taking it step-by-step allows you to set it up in a clear, logical way.
 
 
 ---
