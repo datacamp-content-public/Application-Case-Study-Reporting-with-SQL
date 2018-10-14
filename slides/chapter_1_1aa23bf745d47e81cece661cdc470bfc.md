@@ -126,13 +126,11 @@ disable_transition: false
 
 Must remove all periods from the strings.{{1}}
 
-```REPLACE()``` function can remove characters.{{2}}
-
 ```sql
 SELECT REPLACE(country,".","")
 FROM country_orders
 GROUP BY 1
-```{{3}}
+```{{2}}
 
 
 `@part2`
@@ -140,7 +138,7 @@ GROUP BY 1
 
 
 `@script`
-Let’s dig deeper into these functions.  In our report, we have multiple rows for the UK, one of which includes periods. We need to clean the country field by removing these periods.  The replace function can allow us to replace a substring, in this case a period, with a new substring.  By replacing an empty string, you can remove the character entirely.  This is a great way to remove any stray characters from your report.
+Let's go over some examples.  Our report has two values for the UK, one of which includes periods. We need to remove these periods.  The REPLACE function allows us to replace a substring with nothing, which you do by replacing with empty quotes.
 
 
 ---
